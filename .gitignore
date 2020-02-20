@@ -5,3 +5,7 @@ build
 .idea
 .env
 .gradle
+/bin/
+/gradle.properties
+/.classpath
+/.project
