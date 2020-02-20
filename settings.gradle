@@ -1,4 +1,4 @@
-rootProject.name = "moviefun"
+rootProject.name = "moviefun-modern"
 
 include "applications:movie-fun-app"
 include "applications:album-service"

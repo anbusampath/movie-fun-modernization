@@ -5,3 +5,5 @@ build
 .idea
 .env
 .gradle
+/.project
+/movie-fun-modernization-codebase.txt
