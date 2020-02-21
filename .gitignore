@@ -7,3 +7,4 @@ build
 .gradle
 /.project
 /movie-fun-modernization-codebase.txt
+/gradle.properties
