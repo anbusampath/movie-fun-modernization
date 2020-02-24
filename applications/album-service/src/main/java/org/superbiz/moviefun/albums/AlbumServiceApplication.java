@@ -11,7 +11,7 @@ import org.superbiz.cloudfoundry.ServiceCredentials;
 import org.superbiz.moviefun.blobstore.BlobStore;
 import org.superbiz.moviefun.blobstore.S3Store;
 
-@SpringBootApplication
+@SpringBootApplication(exclude= {io.pivotal.spring.cloud.IssuerCheckConfiguration.class})
 public class AlbumServiceApplication {
     public static void main(String... args) {
         SpringApplication.run(AlbumServiceApplication.class, args);
