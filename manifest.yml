@@ -29,6 +29,7 @@ applications:
   - photo-storage
   - movie-fun-sso
   - movie-fun-registry
+  - movie-fun-config-server
   env:
     ALBUMS_URL: http://album-service-anbu-sampath.cfapps.io/albums
     MOVIES_URL: http://movie-service-anbu-sampath.cfapps.io/movies
