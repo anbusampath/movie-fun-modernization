@@ -6,10 +6,13 @@ import com.amazonaws.services.s3.AmazonS3Client;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
 import org.superbiz.cloudfoundry.ServiceCredentials;
+import org.superbiz.moviefun.albumsapi.CoverCatalog;
+import org.superbiz.moviefun.albumsapi.ResilientCoverCatalog;
 import org.superbiz.moviefun.blobstore.BlobStore;
 import org.superbiz.moviefun.blobstore.S3Store;
 import org.superbiz.moviefun.moviesapi.MovieServlet;
@@ -49,5 +52,10 @@ public class Application {
         }
 
         return new S3Store(s3Client, photoStorageBucket);
+    }
+
+    @Bean
+    public CoverCatalog coverCatalog(BlobStore blobStore) {
+        return new ResilientCoverCatalog(blobStore);
     }
 }
