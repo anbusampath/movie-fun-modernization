@@ -8,6 +8,7 @@ buildscript {
         mysqlVersion = "8.0.19"
         springCloudVersion = "Hoxton.SR2"
         springCloudSsoVersion = "2.1.3.RELEASE"
+        springCloudServicesClientLibrariesVersion = "2.2.1.RELEASE"
         springSecurityOAuthAutoconfigVersion = "2.2.4.RELEASE"
     }
 
